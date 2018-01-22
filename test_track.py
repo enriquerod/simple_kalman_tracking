@@ -30,6 +30,9 @@ for i in range(23):
     cv2.rectangle(frame, (x - 13, y - 13), (x + 13, y + 13), (255, 0, 0), 2)
     cv2.circle(frame,(x,y), 2, (255,0,0), -1)
 
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    cv2.putText(frame,'Background Subtraction',(10,20), font, 0.5,(255,0,0),1,cv2.LINE_AA)
+    cv2.putText(frame,'Kalman Filter',(10,40), font, 0.5,(0,0,255),1,cv2.LINE_AA)
 
     cv2.imshow("Result Kalman", frame)
     cv2.waitKey(0)
